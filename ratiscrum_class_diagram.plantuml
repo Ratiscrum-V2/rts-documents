@@ -2,6 +2,8 @@
 
 question "1" <-- "2" choice : is the answer of
 
+choice "1..n" <-- "1" healthBar : is influenced by
+
 player "1" <-- "3" healthBar : animate
 
 game "1" <-- "1" player : plays in
