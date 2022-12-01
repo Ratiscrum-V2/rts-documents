@@ -4,6 +4,10 @@ question "1" <-- "2" choice : is the answer of
 
 player "1" <-- "3" healthBar : animate
 
+game "1" <-- "1" player : plays in
+
+game "0..n" <-- "0..n" question : is asked in
+
 class question {
     - question: string
     - picture: string
@@ -14,13 +18,17 @@ class choice {
 }
 
 class player {
-
+    - name: string
 }
 
 class healthBar {
     - name: string
     - maxValue: int
     - currentValue: int
+}
+
+class game {
+    - daysCount: number 
 }
 
 
