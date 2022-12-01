@@ -8,6 +8,12 @@ game "1" <-- "1" player : plays in
 
 game "0..n" <-- "0..n" question : is asked in
 
+question "1" <-- "0..n" forumMessage : answer to
+
+forumMessage "1" <-- "1" player : post
+
+forumMessage "1" <-- "1" forumMessage : respond to
+
 class question {
     - question: string
     - picture: string
@@ -29,6 +35,11 @@ class healthBar {
 
 class game {
     - daysCount: number 
+}
+
+class forumMessage {
+    - title: string
+    - message: string
 }
 
 
