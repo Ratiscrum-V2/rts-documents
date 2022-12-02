@@ -218,9 +218,9 @@ La c'est toutes les étapes du job. Ca fonctionne comme ca:
       password: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-`name` : nom de l'étape
-`uses` : nom de l'action à executer
-`with` : arguments de l'action
+`name` : nom de l'étape  
+`uses` : nom de l'action à executer  
+`with` : arguments de l'action  
 
 > On peut voir parmi les variables le mot clé `secrets`. Ce sont des variables secrètes qui sont, pour certaines, généré par Github (comme c'est le cas ici) ou renseigné par les développeurs. On y met des tokens d'authentifications, des mots de passes, des adresses de serveurs etc...
 Sur Ratiscrum, elles sont renseigné dans l'organisation, on peut les retrouver ici : https://github.com/organizations/Ratiscrum-V2/settings/secrets/actions
