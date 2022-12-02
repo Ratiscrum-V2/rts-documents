@@ -242,7 +242,7 @@ Une fois que le workflow est setup, on peut push nos fichiers, et on peut consul
 
 Revenons à nos containers Docker. Avoir pleins de containers, c'est bien, les faire fonctionner ensemble, c'est mieux 👀
 
-Du coup, pour ça, j'ai mis en place un **Docker Compose**.
+Du coup, pour ça, nous avons mis en place un **Docker Compose**.
 
 ### III.1 Docker quoi ? 
 
@@ -307,7 +307,7 @@ api:
 
 Déjà, la clé de l'objet yaml, c'est le nom du service (ici `api`)  
 Le champ `image` correspond à l'image sur laquelle se base le container (ici, on lui indique l'image de l'api ratiscrum)  
-Le champ `restart` indique les conditions de redémarrage de l'api (à always, ca indique de l'api va toujours redémarrer, peu importe si elle s'est arrêté à cause d'un crash, du redémarrage du serv, etc)  
+Le champ `restart` indique les conditions de redémarrage de l'api (à `always`, ca indique de l'api va toujours redémarrer, peu importe si elle s'est arrêté à cause d'un crash, du redémarrage du serv, etc)  
 Le champ `networks` indique les réseaux auquel est connecté le container (ici le réseau web)  
 Le champ `environment` indique les variables d'environnements  
 Le champ `labels` sert ici à indiquer au reverse proxy les règles de ce container, comme son adresse, son port d'écoute, l'utilisation du https ou encore la politique de cors. Le reverse proxy c'est Traefik et il tourne dans un autre fichier compose sur le serv  
